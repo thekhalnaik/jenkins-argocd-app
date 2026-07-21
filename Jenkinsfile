@@ -13,7 +13,7 @@
 // comparing DockerHub vs ECR auth behavior side by side.
 
 pipeline {
-    agent any
+    agent {label 'docker agent'}
 
     parameters {
         booleanParam(name: 'PUSH_TO_DOCKERHUB', defaultValue: true, description: 'Push image to Docker Hub')
